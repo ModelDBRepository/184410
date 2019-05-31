@@ -1,0 +1,3246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:celldesigner="http://www.sbml.org/2001/ns/celldesigner" level="3" version="1">
+  <model id="finalModel_NTDiff_and_AMPA">
+    <listOfUnitDefinitions>
+      <unitDefinition metaid="substance_1" id="substance_1" name="substance of 1">
+        <listOfUnits>
+          <unit metaid="CDMT00002_1" kind="mole" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="volume_1" id="volume_1" name="volume of 1">
+        <listOfUnits>
+          <unit metaid="CDMT00003_1" kind="litre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="area_1" id="area_1" name="area of 1">
+        <listOfUnits>
+          <unit metaid="CDMT00004_1" kind="metre" exponent="2" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="length_1" id="length_1" name="length of 1">
+        <listOfUnits>
+          <unit metaid="CDMT00005_1" kind="metre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="time_1" id="time_1" name="time of 1">
+        <listOfUnits>
+          <unit metaid="CDMT00006_1" kind="second" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="per_mM_per_ms_1" id="per_mM_per_ms_1" name="per_mM_per_ms of 1">
+        <listOfUnits>
+          <unit metaid="CDMT00011_1" kind="mole" exponent="-1" scale="-3" multiplier="1"/>
+          <unit metaid="CDMT00012_1" kind="second" exponent="-1" scale="-3" multiplier="1"/>
+          <unit metaid="CDMT00013_1" kind="litre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="per_ms_1" id="per_ms_1" name="per_ms of 1">
+        <listOfUnits>
+          <unit metaid="CDMT00014_1" kind="second" exponent="-1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="msec_1" id="msec_1" name="msec of 1">
+        <listOfUnits>
+          <unit metaid="CDMT00007_1" kind="second" exponent="1" scale="0" multiplier="0.001"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="mVolts_1" id="mVolts_1" name="mVolts of 1">
+        <listOfUnits>
+          <unit metaid="CDMT00008_1" kind="volt" exponent="1" scale="0" multiplier="0.001"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="substance_2" id="substance_2" name="substance of 2">
+        <listOfUnits>
+          <unit metaid="CDMT00002_2" kind="mole" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="volume_2" id="volume_2" name="volume of 2">
+        <listOfUnits>
+          <unit metaid="CDMT00003_2" kind="litre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="area_2" id="area_2" name="area of 2">
+        <listOfUnits>
+          <unit metaid="CDMT00004_2" kind="metre" exponent="2" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="length_2" id="length_2" name="length of 2">
+        <listOfUnits>
+          <unit metaid="CDMT00005_2" kind="metre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="time_2" id="time_2" name="time of 2">
+        <listOfUnits>
+          <unit metaid="CDMT00006_2" kind="second" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="mM_2" id="mM_2" name="mM of 2">
+        <listOfUnits>
+          <unit metaid="CDMT00007_2" kind="mole" exponent="1" scale="-3" multiplier="1"/>
+          <unit metaid="CDMT00008_2" kind="litre" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="microm_2" id="microm_2" name="microm of 2">
+        <listOfUnits>
+          <unit metaid="CDMT00009_2" kind="metre" exponent="1" scale="-6" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="micromsquare_per_ms_2" id="micromsquare_per_ms_2" name="micromsquare_per_ms of 2">
+        <listOfUnits>
+          <unit metaid="CDMT00048_2" kind="metre" exponent="2" scale="-6" multiplier="1"/>
+          <unit metaid="CDMT00049_2" kind="second" exponent="-1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="ms_2" id="ms_2" name="ms of 2">
+        <listOfUnits>
+          <unit metaid="CDMT00050_2" kind="second" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="per_mM_per_msec_3" id="per_mM_per_msec_3" name="per_mM_per_msec of 3">
+        <listOfUnits>
+          <unit metaid="CDMT00075_3" kind="mole" exponent="-1" scale="-3" multiplier="1"/>
+          <unit metaid="CDMT00076_3" kind="litre" exponent="1" scale="0" multiplier="1"/>
+          <unit metaid="CDMT00077_3" kind="second" exponent="-1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="per_msec_3" id="per_msec_3" name="per_msec of 3">
+        <listOfUnits>
+          <unit metaid="CDMT00078_3" kind="second" exponent="-1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="pS_3" id="pS_3" name="pS of 3">
+        <listOfUnits>
+          <unit metaid="CDMT00079_3" kind="siemens" exponent="1" scale="-12" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="mV_3" id="mV_3" name="mV of 3">
+        <listOfUnits>
+          <unit metaid="CDMT00080_3" kind="volt" exponent="1" scale="-3" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="pA_3" id="pA_3" name="pA of 3">
+        <listOfUnits>
+          <unit metaid="CDMT00081_3" kind="ampere" exponent="1" scale="-12" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="substance_3" id="substance_3" name="substance of 3">
+        <listOfUnits>
+          <unit metaid="CDMT00082_3" kind="mole" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="volume_3" id="volume_3" name="volume of 3">
+        <listOfUnits>
+          <unit metaid="CDMT00083_3" kind="litre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="area_3" id="area_3" name="area of 3">
+        <listOfUnits>
+          <unit metaid="CDMT00084_3" kind="metre" exponent="2" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="length_3" id="length_3" name="length of 3">
+        <listOfUnits>
+          <unit metaid="CDMT00085_3" kind="metre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition metaid="time_3" id="time_3" name="time of 3">
+        <listOfUnits>
+          <unit metaid="CDMT00086_3" kind="second" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment metaid="default_1" id="default_1" spatialDimensions="3" size="1" units="volume" constant="true"/>
+      <compartment metaid="default_2" id="default_2" spatialDimensions="3" size="1" units="volume" constant="true"/>
+      <compartment metaid="default_3" id="default_3" spatialDimensions="3" size="1" units="volume" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species metaid="CDMT00062_1" id="fakeinput_1" name="fakeinput of 1" compartment="default_1" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+              <celldesigner:name>fakeinput</celldesigner:name>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="NT_2" id="NT_2" name="NT of 2" compartment="default_2" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr1</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="R0_3" id="R0_3" name="R0 of 3" compartment="default_3" initialAmount="1" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr1</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="R1_3" id="R1_3" name="R1 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr2</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="R2_3" id="R2_3" name="R2 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr3</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="R3_3" id="R3_3" name="R3 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr4</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="R4_3" id="R4_3" name="R4 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr5</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="Glu_3" id="Glu_3" name="Glu of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>SIMPLE_MOLECULE</celldesigner:class>
+              <celldesigner:name>Glu</celldesigner:name>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="D0_3" id="D0_3" name="D0 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr6</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="D1_3" id="D1_3" name="D1 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr7</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="D2_3" id="D2_3" name="D2 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr8</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="D3_3" id="D3_3" name="D3 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr9</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="D4_3" id="D4_3" name="D4 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr10</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="E2_3" id="E2_3" name="E2 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr11</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="E3_3" id="E3_3" name="E3 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr12</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="E4_3" id="E4_3" name="E4 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr13</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="O2_3" id="O2_3" name="O2 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr14</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="O3_3" id="O3_3" name="O3 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr15</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="O4_3" id="O4_3" name="O4 of 3" compartment="default_3" initialAmount="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>PROTEIN</celldesigner:class>
+              <celldesigner:proteinReference>pr16</celldesigner:proteinReference>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="Vm_3" id="Vm_3" name="Vm of 3" compartment="default_3" initialAmount="-60" substanceUnits="substance" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>ION</celldesigner:class>
+              <celldesigner:name>Vm</celldesigner:name>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+      <species metaid="LTP_ampaNbModFactor_3" id="LTP_ampaNbModFactor_3" name="LTP_ampaNbModFactor of 3" compartment="default_3" initialAmount="1" substanceUnits="substance" hasOnlySubstanceUnits="true" boundaryCondition="true" constant="false">
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:positionToCompartment>inside</celldesigner:positionToCompartment>
+            <celldesigner:speciesIdentity>
+              <celldesigner:class>ION</celldesigner:class>
+              <celldesigner:name>LTP_ampaNbModFactor</celldesigner:name>
+            </celldesigner:speciesIdentity>
+          </celldesigner:extension>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter metaid="NT_init_1" id="Vmin_1" name="Vmin of 1" value="0" units="mVolts" constant="true"/>
+      <parameter metaid="NT_final_1" id="Vmax_1" name="Vmax of 1" value="3000" units="mVolts" constant="true"/>
+      <parameter metaid="input_1" id="V_1" name="V of 1" value="0" units="mVolts" constant="false"/>
+      <parameter metaid="NT_delay_1" id="Delay_1" name="Delay of 1" value="10" units="msec" constant="true"/>
+      <parameter metaid="NT_duration_1" id="Npulses_1" name="Npulses of 1" value="1" units="substance" constant="true"/>
+      <parameter metaid="PULSE_interval_1" id="tup_1" name="tup of 1" value="1" units="msec" constant="true"/>
+      <parameter metaid="PULSE_duration_1" id="tdown_1" name="tdown of 1" value="9" units="msec" constant="true"/>
+      <parameter metaid="t_PULSE_up_1" id="t_PULSE_up_1" name="t_PULSE_up of 1" value="-1000000000" units="dimensionless" constant="false"/>
+      <parameter metaid="t_PULSE_down_1" id="t_PULSE_down_1" name="t_PULSE_down of 1" value="-1000000000" units="dimensionless" constant="false"/>
+      <parameter metaid="pulseNb_1" id="pulseNb_1" name="pulseNb of 1" value="0" units="substance" constant="false"/>
+      <parameter metaid="ON_1" id="ON_1" name="ON of 1" value="0" units="substance" constant="false"/>
+      <parameter metaid="OFF_1" id="OFF_1" name="OFF of 1" value="0" units="substance" constant="false"/>
+      <parameter metaid="NTconc_2" id="NTconcAMPA_2" name="concentration NT of 2" value="0" units="mM" constant="false"/>
+      <parameter metaid="tempVar1_2" id="tempVar1_2" name="tempVar1 of 2" value="0" units="dimensionless" constant="false"/>
+      <parameter metaid="tempVar2_2" id="tempVar2AMPA_2" name="tempVar2AMPA of 2" value="0" units="dimensionless" constant="false"/>
+      <parameter metaid="k0_2" id="k0_2" name="k0 of 2" value="0.002188" units="dimensionless" constant="true"/>
+      <parameter metaid="distance_2" id="distanceAMPA_2" name="distanceAMPA of 2" value="0.03" units="microm" constant="true"/>
+      <parameter metaid="cleftWidth_2" id="cleftWidth_2" name="cleftWidth of 2" value="0.02" units="microm" constant="true"/>
+      <parameter metaid="NTdiffCoeff_2" id="NTdiffCoef_2" name="NTdiffCoef of 2" value="0.4" units="micromsquare_per_ms" constant="true"/>
+      <parameter metaid="PiValue_2" id="PiValue_2" name="pi  of 2" value="3.14159" units="dimensionless" constant="true"/>
+      <parameter metaid="uptime_2" id="temp_time_2" name="temp variable for time of 2" value="0" units="ms" constant="false"/>
+      <parameter metaid="upnt_2" id="temp_nt_2" name="temp variable for nt of 2" value="0" units="substance" constant="false"/>
+      <parameter metaid="tmp_fake_2" id="tmp_fake_2" name="feke deriv of 2" value="0" units="dimensionless" constant="false"/>
+      <parameter metaid="memorySize_2" id="memorySize_2" name="memorySize of 2" value="40" units="ms" constant="true"/>
+      <parameter metaid="position_2" id="position_unused_2" name="position_unused of 2" value="0.205" units="microm" constant="true"/>
+      <parameter metaid="t0_2" id="t0_2" value="-1" units="ms" constant="false"/>
+      <parameter metaid="t1_2" id="t1_2" value="-1" units="ms" constant="false"/>
+      <parameter metaid="t2_2" id="t2_2" value="-1" units="ms" constant="false"/>
+      <parameter metaid="t3_2" id="t3_2" value="-1" units="ms" constant="false"/>
+      <parameter metaid="t4_2" id="t4_2" value="-1" units="ms" constant="false"/>
+      <parameter metaid="t5_2" id="t5_2" value="-1" units="ms" constant="false"/>
+      <parameter metaid="t6_2" id="t6_2" value="-1" units="ms" constant="false"/>
+      <parameter metaid="t7_2" id="t7_2" value="-1" units="ms" constant="false"/>
+      <parameter metaid="nt0_2" id="nt0_2" value="0" units="mM" constant="false"/>
+      <parameter metaid="nt1_2" id="nt1_2" value="0" units="mM" constant="false"/>
+      <parameter metaid="nt2_2" id="nt2_2" value="0" units="mM" constant="false"/>
+      <parameter metaid="nt3_2" id="nt3_2" value="0" units="mM" constant="false"/>
+      <parameter metaid="nt4_2" id="nt4_2" value="0" units="mM" constant="false"/>
+      <parameter metaid="nt5_2" id="nt5_2" value="0" units="mM" constant="false"/>
+      <parameter metaid="nt6_2" id="nt6_2" value="0" units="mM" constant="false"/>
+      <parameter metaid="nt7_2" id="nt7_2" value="0" units="mM" constant="false"/>
+      <parameter metaid="NTconcNMDA_2" id="NTconcNMDA_2" name="NTconcNMDA of 2" value="0" units="mM" constant="false"/>
+      <parameter metaid="NTconcmGluR_2" id="NTconcmGluR_2" name="NTconcmGluR of 2" value="0" units="mM" constant="false"/>
+      <parameter metaid="positionNMDA_2" id="distanceNMDA_2" name="distanceNMDA of 2" value="0.1" units="microm" constant="true"/>
+      <parameter metaid="positionmGluR_2" id="distancemGluR_2" name="distancemGluR of 2" value="1" units="microm" constant="true"/>
+      <parameter metaid="tempVar2NMDA_2" id="tempVar2NMDA_2" name="tempVar2NMDA of 2" value="0" units="dimensionless" constant="false"/>
+      <parameter metaid="tempVar2mGluR_2" id="tempVar2mGluR_2" name="tempVar2mGluR of 2" value="0" units="dimensionless" constant="false"/>
+      <parameter metaid="kass_re1_3" id="kass_re1_3" value="10" units="per_mM_per_msec" constant="true"/>
+      <parameter metaid="kdiss_re1_3" id="kdiss_re1_3" value="7" units="per_msec" constant="true"/>
+      <parameter metaid="kass_re5_3" id="kass_re5_3" value="10" units="per_mM_per_msec" constant="true"/>
+      <parameter metaid="kdiss_re5_3" id="kdiss_re5_3" value="0.00041" units="per_msec" constant="true"/>
+      <parameter metaid="kass_re11_3" id="kass_re11_3" value="0" units="per_msec" constant="false"/>
+      <parameter metaid="kdiss_re11_3" id="kdiss_re11_3" value="0.001" units="per_msec" constant="true"/>
+      <parameter metaid="kass_re12_3" id="kass_re12_3" value="0" units="per_msec" constant="false"/>
+      <parameter metaid="kdiss_re12_3" id="kdiss_re12_3" value="0.017" units="per_msec" constant="true"/>
+      <parameter metaid="kass_re16_3" id="kass_re16_3" value="0.55" units="per_msec" constant="true"/>
+      <parameter metaid="kdiss_re16_3" id="kdiss_re16_3" value="0" units="per_msec" constant="false"/>
+      <parameter metaid="kass_re19_3" id="kass_re19_3" value="0.2" units="per_msec" constant="true"/>
+      <parameter metaid="kdiss_re19_3" id="kdiss_re19_3" value="0.035" units="per_msec" constant="true"/>
+      <parameter metaid="conduc_O2_3" id="conduc_O2_3" name="conductance for state O2 of 3" value="9" units="pS" constant="true"/>
+      <parameter metaid="conduc_O3_3" id="conduc_O3_3" name="conductance for state O3 of 3" value="15" units="pS" constant="true"/>
+      <parameter metaid="conduc_O4_3" id="conduc_O4_3" name="conductance for state 04 of 3" value="21" units="pS" constant="true"/>
+      <parameter metaid="Erev_AMPA_3" id="Erev_AMPA_3" name="AMPA reversal potential  of 3" value="0" units="mV" constant="true"/>
+      <parameter metaid="current_AMPA_3" id="current_AMPA_3" name="AMPA current of 3" value="0" units="pA" constant="false"/>
+      <parameter metaid="sumOpen_3" id="sumOpen_3" name="sumOpen = O2+O3+O4 of 3" value="0" units="dimensionless" constant="false"/>
+      <parameter metaid="PNa_3" id="PNa_3" name="Permeability for Sodium (Na) of 3" value="50" units="percent" constant="true"/>
+      <parameter metaid="PK_3" id="PK_3" name="Permeability for Potassium (K) of 3" value="49.5" units="percent" constant="true"/>
+      <parameter metaid="PCa_3" id="PCa_3" name="Permeability for Calcium (Ca) of 3" value="0.5" units="percent" constant="true"/>
+      <parameter metaid="ICa_AMPA_3" id="ICa_AMPA_3" name="AMPA mediated current by Ca of 3" value="0" units="pA" constant="false"/>
+      <parameter metaid="INa_AMPA_3" id="INa_AMPA_3" name="AMPA mediated current by Na of 3" value="0" units="pA" constant="false"/>
+      <parameter metaid="IK_AMPA_3" id="IK_AMPA_3" name="AMPA mediated current by K of 3" value="0" units="pA" constant="false"/>
+      <parameter metaid="nbAMPAR_3" id="nbAMPAR_3" name="nbAMPAR of 3" value="1" units="dimensionless" constant="true"/>
+      <parameter metaid="NewNbAMPAR_3" id="NewNbAMPAR_3" value="0" units="dimensionless" constant="false"/>
+      <parameter metaid="Deact_factor_3" id="Deact_factor_3" name="1.4601 for 1 Mm and 1.9725 for 5 mM of 3" value="1" units="dimensionless" constant="true"/>
+      <parameter metaid="Desens_factor_3" id="Desens_factor_3" name="1.8560 for 1mM and 13.4046 for 5 mM of 3" value="1" units="dimensionless" constant="true"/>
+      <parameter metaid="kdiss_re16_Init_3" id="kdiss_re16_Init_3" value="0.3" units="per_msec" constant="true"/>
+      <parameter metaid="kass_re11_Init_3" id="kass_re11_Init_3" value="3.3e-006" units="per_msec" constant="true"/>
+      <parameter metaid="kass_re12_Init_3" id="kass_re12_Init_3" value="0.42" units="per_msec" constant="true"/>
+    </listOfParameters>
+    <listOfRules>
+      <assignmentRule metaid="V_1" variable="V_1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <piecewise>
+            <piece>
+              <ci> Vmax_1 </ci>
+              <apply>
+                <and/>
+                <apply>
+                  <gt/>
+                  <ci> ON_1 </ci>
+                  <cn type="integer"> 0 </cn>
+                </apply>
+                <apply>
+                  <lt/>
+                  <ci> OFF_1 </ci>
+                  <cn type="integer"> 1 </cn>
+                </apply>
+              </apply>
+            </piece>
+            <otherwise>
+              <ci> Vmin_1 </ci>
+            </otherwise>
+          </piecewise>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00012_2" variable="tempVar1_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <cn type="integer"> 4 </cn>
+            <ci> PiValue_2 </ci>
+            <ci> cleftWidth_2 </ci>
+            <ci> NTdiffCoef_2 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00013_2" variable="tempVar2AMPA_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> distanceAMPA_2 </ci>
+                <ci> distanceAMPA_2 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <cn type="integer"> 4 </cn>
+              <ci> NTdiffCoef_2 </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <rateRule metaid="CDMT00010_2" variable="tmp_fake_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <cn type="integer"> 0 </cn>
+        </math>
+      </rateRule>
+      <assignmentRule metaid="CDMT00001_2" variable="NTconcAMPA_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> k0_2 </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt0_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t0_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2AMPA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t0_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt1_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t1_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2AMPA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t1_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt2_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t2_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2AMPA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t2_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt3_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t3_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2AMPA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t3_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt4_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t4_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2AMPA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t4_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt5_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t5_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2AMPA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t5_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt6_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t6_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2AMPA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t6_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt7_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t7_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2AMPA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t7_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+            <cn type="integer"> 1000 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00038_2" variable="tempVar2NMDA_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> distanceNMDA_2 </ci>
+                <ci> distanceNMDA_2 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <cn type="integer"> 4 </cn>
+              <ci> NTdiffCoef_2 </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00039_2" variable="tempVar2mGluR_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> distancemGluR_2 </ci>
+                <ci> distancemGluR_2 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <times/>
+              <cn type="integer"> 4 </cn>
+              <ci> NTdiffCoef_2 </ci>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00040_2" variable="NTconcNMDA_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> k0_2 </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt0_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t0_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2NMDA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t0_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt1_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t1_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2NMDA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t1_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt2_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t2_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2NMDA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t2_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt3_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t3_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2NMDA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t3_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt4_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t4_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2NMDA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t4_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt5_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t5_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2NMDA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t5_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt6_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t6_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2NMDA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t6_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt7_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t7_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2NMDA_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t7_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+            <cn type="integer"> 1000 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00041_2" variable="NTconcmGluR_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <apply>
+              <times/>
+              <ci> k0_2 </ci>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt0_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t0_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2mGluR_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t0_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt1_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t1_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2mGluR_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t1_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt2_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t2_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2mGluR_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t2_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt3_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t3_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2mGluR_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t3_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt4_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t4_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2mGluR_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t4_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt5_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t5_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2mGluR_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t5_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt6_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t6_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2mGluR_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t6_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <apply>
+                    <divide/>
+                    <ci> nt7_2 </ci>
+                    <apply>
+                      <times/>
+                      <ci> tempVar1_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t7_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <exp/>
+                    <apply>
+                      <divide/>
+                      <ci> tempVar2mGluR_2 </ci>
+                      <apply>
+                        <minus/>
+                        <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                        <ci> t7_2 </ci>
+                      </apply>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+            <cn type="integer"> 1000 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00087_3" variable="current_AMPA_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <ci> conduc_O2_3 </ci>
+                <ci> O2_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> conduc_O3_3 </ci>
+                <ci> O3_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> conduc_O4_3 </ci>
+                <ci> O4_3 </ci>
+              </apply>
+            </apply>
+            <apply>
+              <minus/>
+              <ci> Vm_3 </ci>
+              <ci> Erev_AMPA_3 </ci>
+            </apply>
+            <cn> 0.001 </cn>
+            <ci> NewNbAMPAR_3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00088_3" variable="sumOpen_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <plus/>
+            <ci> O2_3 </ci>
+            <ci> O3_3 </ci>
+            <ci> O4_3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00089_3" variable="INa_AMPA_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <divide/>
+              <ci> PNa_3 </ci>
+              <cn type="integer"> 100 </cn>
+            </apply>
+            <ci> current_AMPA_3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00090_3" variable="IK_AMPA_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <divide/>
+              <ci> PK_3 </ci>
+              <cn type="integer"> 100 </cn>
+            </apply>
+            <ci> current_AMPA_3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00091_3" variable="ICa_AMPA_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <apply>
+              <divide/>
+              <ci> PCa_3 </ci>
+              <cn type="integer"> 100 </cn>
+            </apply>
+            <ci> current_AMPA_3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00093_3" variable="NewNbAMPAR_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <times/>
+            <ci> nbAMPAR_3 </ci>
+            <ci> LTP_ampaNbModFactor_3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00001_3" variable="kdiss_re16_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> kdiss_re16_Init_3 </ci>
+            <ci> Deact_factor_3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00092_3" variable="kass_re11_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> kass_re11_Init_3 </ci>
+            <ci> Desens_factor_3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CDMT00094_3" variable="kass_re12_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <apply>
+            <divide/>
+            <ci> kass_re12_Init_3 </ci>
+            <ci> Desens_factor_3 </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CMDT1440202783" variable="NT_2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> V_1 </ci>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="CMDT1439822710" variable="Glu_3">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">
+          <ci> NTconcAMPA_2 </ci>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction metaid="re1_3" id="re1_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for second order forward, first order reverse, reversible reactions, two reactants, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>HETERODIMER_ASSOCIATION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R0" alias="sa1">
+                <celldesigner:linkAnchor position="E"/>
+              </celldesigner:baseReactant>
+              <celldesigner:baseReactant species="Glu" alias="sa6">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="R1" alias="sa2">
+                <celldesigner:linkAnchor position="W"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection arm="0" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="1" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="2" index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">0.0,0.5173611111111103</celldesigner:editPoints>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00002_3" species="R0_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa1</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+          <speciesReference metaid="CDMT00003_3" species="Glu_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa6</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00004_3" species="R1_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa2</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00005">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 4 </cn>
+                <ci> kass_re1_3 </ci>
+                <ci> R0_3 </ci>
+                <ci> Glu_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 1 </cn>
+                <ci> kdiss_re1_3 </ci>
+                <ci> R1_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re2_3" id="re2_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for second order forward, first order reverse, reversible reactions, two reactants, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>HETERODIMER_ASSOCIATION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R1" alias="sa2">
+                <celldesigner:linkAnchor position="E"/>
+              </celldesigner:baseReactant>
+              <celldesigner:baseReactant species="Glu" alias="sa7">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="R2" alias="sa3">
+                <celldesigner:linkAnchor position="W"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection arm="0" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="1" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="2" index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">-4.440892098500626E-16,0.521939953810624</celldesigner:editPoints>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00006_3" species="R1_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa2</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+          <speciesReference metaid="CDMT00007_3" species="Glu_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa7</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00008_3" species="R2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa3</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00009">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 3 </cn>
+                <ci> kass_re1_3 </ci>
+                <ci> R1_3 </ci>
+                <ci> Glu_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> kdiss_re1_3 </ci>
+                <ci> R2_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re3_3" id="re3_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for second order forward, first order reverse, reversible reactions, two reactants, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>HETERODIMER_ASSOCIATION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R2" alias="sa3">
+                <celldesigner:linkAnchor position="E"/>
+              </celldesigner:baseReactant>
+              <celldesigner:baseReactant species="Glu" alias="sa8">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="R3" alias="sa4">
+                <celldesigner:linkAnchor position="W"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection arm="0" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="1" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="2" index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">-1.7763568394002505E-15,0.5153664302600474</celldesigner:editPoints>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00010_3" species="R2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa3</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+          <speciesReference metaid="CDMT00011_3" species="Glu_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa8</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00012_3" species="R3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa4</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00013">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> kass_re1_3 </ci>
+                <ci> R2_3 </ci>
+                <ci> Glu_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 3 </cn>
+                <ci> kdiss_re1_3 </ci>
+                <ci> R3_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re4_3" id="re4_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for second order forward, first order reverse, reversible reactions, two reactants, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>HETERODIMER_ASSOCIATION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R3" alias="sa4">
+                <celldesigner:linkAnchor position="E"/>
+              </celldesigner:baseReactant>
+              <celldesigner:baseReactant species="Glu" alias="sa9">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="R4" alias="sa5">
+                <celldesigner:linkAnchor position="W"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection arm="0" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="1" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="2" index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">-1.7763568394002505E-15,0.5396096440872569</celldesigner:editPoints>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00014_3" species="R3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa4</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+          <speciesReference metaid="CDMT00015_3" species="Glu_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa9</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00016_3" species="R4_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa5</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00017">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 1 </cn>
+                <ci> kass_re1_3 </ci>
+                <ci> R3_3 </ci>
+                <ci> Glu_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 4 </cn>
+                <ci> kdiss_re1_3 </ci>
+                <ci> R4_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re5_3" id="re5_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for second order forward, first order reverse, reversible reactions, two reactants, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>HETERODIMER_ASSOCIATION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="D0" alias="sa10">
+                <celldesigner:linkAnchor position="E"/>
+              </celldesigner:baseReactant>
+              <celldesigner:baseReactant species="Glu" alias="sa21">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="D1" alias="sa11">
+                <celldesigner:linkAnchor position="W"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection arm="0" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="1" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="2" index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">0.0,0.5111633372502933</celldesigner:editPoints>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00018_3" species="D0_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa10</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+          <speciesReference metaid="CDMT00019_3" species="Glu_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa21</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00020_3" species="D1_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa11</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00021">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 3 </cn>
+                <ci> kass_re5_3 </ci>
+                <ci> D0_3 </ci>
+                <ci> Glu_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re5_3 </ci>
+                <ci> D1_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re6_3" id="re6_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for second order forward, first order reverse, reversible reactions, two reactants, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>HETERODIMER_ASSOCIATION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="D1" alias="sa11">
+                <celldesigner:linkAnchor position="E"/>
+              </celldesigner:baseReactant>
+              <celldesigner:baseReactant species="Glu" alias="sa22">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="D2" alias="sa12">
+                <celldesigner:linkAnchor position="W"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection arm="0" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="1" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="2" index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">0.020429917960532507,0.5126052142824937</celldesigner:editPoints>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00022_3" species="D1_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa11</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+          <speciesReference metaid="CDMT00023_3" species="Glu_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa22</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00024_3" species="D2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa12</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00025">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 3 </cn>
+                <ci> kass_re1_3 </ci>
+                <ci> D1_3 </ci>
+                <ci> Glu_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re1_3 </ci>
+                <ci> D2_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re7_3" id="re7_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for second order forward, first order reverse, reversible reactions, two reactants, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>HETERODIMER_ASSOCIATION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="D2" alias="sa12">
+                <celldesigner:linkAnchor position="E"/>
+              </celldesigner:baseReactant>
+              <celldesigner:baseReactant species="Glu" alias="sa23">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="D3" alias="sa13">
+                <celldesigner:linkAnchor position="W"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection arm="0" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="1" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="2" index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">0.017157737357434755,0.5075729378417888</celldesigner:editPoints>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00026_3" species="D2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa12</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+          <speciesReference metaid="CDMT00027_3" species="Glu_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa23</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00028_3" species="D3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa13</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00029">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> kass_re1_3 </ci>
+                <ci> D2_3 </ci>
+                <ci> Glu_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> kdiss_re1_3 </ci>
+                <ci> D3_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re8_3" id="re8_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for second order forward, first order reverse, reversible reactions, two reactants, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>HETERODIMER_ASSOCIATION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="D3" alias="sa13">
+                <celldesigner:linkAnchor position="E"/>
+              </celldesigner:baseReactant>
+              <celldesigner:baseReactant species="Glu" alias="sa24">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="D4" alias="sa14">
+                <celldesigner:linkAnchor position="W"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection arm="0" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="1" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="2" index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">0.0016643493058303704,0.5389752422852636</celldesigner:editPoints>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00030_3" species="D3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa13</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+          <speciesReference metaid="CDMT00031_3" species="Glu_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa24</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00032_3" species="D4_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa14</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00033">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 1 </cn>
+                <ci> kass_re1_3 </ci>
+                <ci> D3_3 </ci>
+                <ci> Glu_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 3 </cn>
+                <ci> kdiss_re1_3 </ci>
+                <ci> D4_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re9_3" id="re9_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for second order forward, first order reverse, reversible reactions, two reactants, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>HETERODIMER_ASSOCIATION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="E2" alias="sa15">
+                <celldesigner:linkAnchor position="E"/>
+              </celldesigner:baseReactant>
+              <celldesigner:baseReactant species="Glu" alias="sa25">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="E3" alias="sa16">
+                <celldesigner:linkAnchor position="W"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection arm="0" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="1" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="2" index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">0.0,0.515748031496063</celldesigner:editPoints>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00034_3" species="E2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa15</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+          <speciesReference metaid="CDMT00035_3" species="Glu_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa25</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00036_3" species="E3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa16</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00037">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> kass_re1_3 </ci>
+                <ci> E2_3 </ci>
+                <ci> Glu_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re1_3 </ci>
+                <ci> E3_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re10_3" id="re10_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for second order forward, first order reverse, reversible reactions, two reactants, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>HETERODIMER_ASSOCIATION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="E3" alias="sa16">
+                <celldesigner:linkAnchor position="E"/>
+              </celldesigner:baseReactant>
+              <celldesigner:baseReactant species="Glu" alias="sa26">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="E4" alias="sa17">
+                <celldesigner:linkAnchor position="W"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection arm="0" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="1" index="0" value="unknown"/>
+                <celldesigner:lineDirection arm="2" index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:editPoints num0="0" num1="0" num2="0" tShapeIndex="0">0.0,0.5389908256880762</celldesigner:editPoints>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00038_3" species="E3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa16</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+          <speciesReference metaid="CDMT00039_3" species="Glu_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa26</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00040_3" species="E4_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa17</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00041">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kass_re1_3 </ci>
+                <ci> E3_3 </ci>
+                <ci> Glu_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> kdiss_re1_3 </ci>
+                <ci> E4_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re11_3" id="re11_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R0" alias="sa1">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="D0" alias="sa10">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00042_3" species="R0_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa1</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00043_3" species="D0_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa10</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00044">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 4 </cn>
+                <ci> kass_re11_3 </ci>
+                <ci> R0_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re11_3 </ci>
+                <ci> D0_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re12_3" id="re12_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R1" alias="sa2">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="D1" alias="sa11">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00045_3" species="R1_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa2</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00046_3" species="D1_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa11</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00047">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 1 </cn>
+                <ci> kass_re12_Init_3 </ci>
+                <ci> R1_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re12_3 </ci>
+                <ci> D1_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re13_3" id="re13_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R2" alias="sa3">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="D2" alias="sa12">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00048_3" species="R2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa3</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00049_3" species="D2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa12</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00050">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> kass_re12_Init_3 </ci>
+                <ci> R2_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re12_3 </ci>
+                <ci> D2_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re14_3" id="re14_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R3" alias="sa4">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="D3" alias="sa13">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00051_3" species="R3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa4</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00052_3" species="D3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa13</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00053">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 3 </cn>
+                <ci> kass_re12_Init_3 </ci>
+                <ci> R3_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re12_3 </ci>
+                <ci> D3_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re15_3" id="re15_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R4" alias="sa5">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="D4" alias="sa14">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00054_3" species="R4_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa5</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00055_3" species="D4_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa14</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00056">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 4 </cn>
+                <ci> kass_re12_Init_3 </ci>
+                <ci> R4_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re12_3 </ci>
+                <ci> D4_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re16_3" id="re16_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R2" alias="sa3">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="O2" alias="sa18">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00057_3" species="R2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa3</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00058_3" species="O2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa18</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00059">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> kass_re16_3 </ci>
+                <ci> R2_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re16_3 </ci>
+                <ci> O2_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re17_3" id="re17_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R3" alias="sa4">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="O3" alias="sa19">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00060_3" species="R3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa4</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00061_3" species="O3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa19</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00062">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 3 </cn>
+                <ci> kass_re16_3 </ci>
+                <ci> R3_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re16_3 </ci>
+                <ci> O3_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re18_3" id="re18_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="R4" alias="sa5">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="O4" alias="sa20">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00063_3" species="R4_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa5</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00064_3" species="O4_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa20</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00065">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 4 </cn>
+                <ci> kass_re16_3 </ci>
+                <ci> R4_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re16_3 </ci>
+                <ci> O4_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re19_3" id="re19_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="D2" alias="sa12">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="E2" alias="sa15">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00066_3" species="D2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa12</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00067_3" species="E2_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa15</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00068">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 1 </cn>
+                <ci> kass_re19_3 </ci>
+                <ci> D2_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re19_3 </ci>
+                <ci> E2_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re20_3" id="re20_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="D3" alias="sa13">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="E3" alias="sa16">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00069_3" species="D3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa13</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00070_3" species="E3_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa16</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00071">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 2 </cn>
+                <ci> kass_re19_3 </ci>
+                <ci> D3_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re19_3 </ci>
+                <ci> E3_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction metaid="re21_3" id="re21_3" reversible="true" fast="false">
+        <notes>
+          <html xmlns="http://www.w3.org/1999/xhtml">
+            <head>
+              <title/>
+            </head>
+            <body>mass action rate law for first order forward, first order reverse, reversible reactions, continuous scheme
+</body>
+          </html>
+        </notes>
+        <annotation>
+          <celldesigner:extension>
+            <celldesigner:reactionType>STATE_TRANSITION</celldesigner:reactionType>
+            <celldesigner:baseReactants>
+              <celldesigner:baseReactant species="D4" alias="sa14">
+                <celldesigner:linkAnchor position="S"/>
+              </celldesigner:baseReactant>
+            </celldesigner:baseReactants>
+            <celldesigner:baseProducts>
+              <celldesigner:baseProduct species="E4" alias="sa17">
+                <celldesigner:linkAnchor position="N"/>
+              </celldesigner:baseProduct>
+            </celldesigner:baseProducts>
+            <celldesigner:connectScheme connectPolicy="direct" rectangleIndex="0">
+              <celldesigner:listOfLineDirection>
+                <celldesigner:lineDirection index="0" value="unknown"/>
+              </celldesigner:listOfLineDirection>
+            </celldesigner:connectScheme>
+            <celldesigner:line width="1.0" color="ff000000"/>
+          </celldesigner:extension>
+        </annotation>
+        <listOfReactants>
+          <speciesReference metaid="CDMT00072_3" species="D4_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa14</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference metaid="CDMT00073_3" species="E4_3" stoichiometry="1" constant="true">
+            <annotation>
+              <celldesigner:extension>
+                <celldesigner:alias>sa17</celldesigner:alias>
+              </celldesigner:extension>
+            </annotation>
+          </speciesReference>
+        </listOfProducts>
+        <kineticLaw metaid="CDMT00074">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <cn type="integer"> 3 </cn>
+                <ci> kass_re19_3 </ci>
+                <ci> D4_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kdiss_re19_3 </ci>
+                <ci> E4_3 </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+    <listOfEvents>
+      <event metaid="newPulse_1" id="newPulse_1" name="newPulse of 1" useValuesFromTriggerTime="true">
+        <trigger metaid="CDMT00026_1" initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <gt/>
+                <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <ci> pulseNb_1 </ci>
+                    <apply>
+                      <plus/>
+                      <ci> tup_1 </ci>
+                      <ci> tdown_1 </ci>
+                    </apply>
+                  </apply>
+                  <ci> Delay_1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <lt/>
+                <ci> pulseNb_1 </ci>
+                <ci> Npulses_1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <delay metaid="CDMT00027_1">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 0 </cn>
+          </math>
+        </delay>
+        <listOfEventAssignments>
+          <eventAssignment metaid="CDMT00021_1" variable="pulseNb_1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <plus/>
+                <ci> pulseNb_1 </ci>
+                <cn type="integer"> 1 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00018_1" variable="ON_1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 1 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00028_1" variable="OFF_1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event metaid="newPulseEnd_1" id="newPulseEnd_1" name="newPulseEnd of 1" useValuesFromTriggerTime="true">
+        <trigger metaid="CDMT00029_1" initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <and/>
+              <apply>
+                <gt/>
+                <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <minus/>
+                      <ci> pulseNb_1 </ci>
+                      <cn type="integer"> 1 </cn>
+                    </apply>
+                    <apply>
+                      <plus/>
+                      <ci> tup_1 </ci>
+                      <ci> tdown_1 </ci>
+                    </apply>
+                  </apply>
+                  <ci> Delay_1 </ci>
+                  <ci> tup_1 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <leq/>
+                <ci> pulseNb_1 </ci>
+                <ci> Npulses_1 </ci>
+              </apply>
+            </apply>
+          </math>
+        </trigger>
+        <delay metaid="CDMT00030_1">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 0 </cn>
+          </math>
+        </delay>
+        <listOfEventAssignments>
+          <eventAssignment metaid="CDMT00022_1" variable="ON_1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00023_1" variable="OFF_1">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 1 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event metaid="dd_2" id="diffusion_ON_2" name="diffusion_ON of 2" useValuesFromTriggerTime="true">
+        <trigger metaid="CDMT00034_2" initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <gt/>
+              <ci> NT_2 </ci>
+              <cn type="integer"> 0 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <delay metaid="CDMT00035_2">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 0 </cn>
+          </math>
+        </delay>
+        <listOfEventAssignments>
+          <eventAssignment metaid="CDMT00026_2" variable="temp_nt_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> NT_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00043_2" variable="temp_time_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00016_2" variable="t0_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <minus/>
+                <csymbol encoding="text" definitionURL="http://www.sbml.org/sbml/symbols/time"> time </csymbol>
+                <cn type="e-notation"> 1 <sep/> -10 </cn>
+              </apply>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00018_2" variable="nt0_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> NT_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00015_2" variable="t1_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> t0_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00017_2" variable="t2_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> t1_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00019_2" variable="t3_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> t2_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00020_2" variable="t4_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> t3_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00021_2" variable="t5_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> t4_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00022_2" variable="t6_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> t5_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00023_2" variable="t7_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> t6_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00024_2" variable="nt1_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> nt0_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00025_2" variable="nt2_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> nt1_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00027_2" variable="nt3_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> nt2_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00028_2" variable="nt4_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> nt3_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00029_2" variable="nt5_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> nt4_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00030_2" variable="nt6_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> nt5_2 </ci>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00031_2" variable="nt7_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <ci> nt6_2 </ci>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+      <event metaid="diffusion_OFF_2" id="diffusion_OFF_2" name="diffusion_OFF of 2" useValuesFromTriggerTime="true">
+        <trigger metaid="CDMT00036_2" initialValue="true" persistent="true">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <eq/>
+              <ci> NT_2 </ci>
+              <cn type="integer"> 0 </cn>
+            </apply>
+          </math>
+        </trigger>
+        <delay metaid="CDMT00037_2">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <cn type="integer"> 0 </cn>
+          </math>
+        </delay>
+        <listOfEventAssignments>
+          <eventAssignment metaid="CDMT00046_2" variable="temp_nt_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+          <eventAssignment metaid="CDMT00047_2" variable="temp_time_2">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn type="integer"> 0 </cn>
+            </math>
+          </eventAssignment>
+        </listOfEventAssignments>
+      </event>
+    </listOfEvents>
+  </model>
+</sbml>
